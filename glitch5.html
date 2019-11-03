@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .fakeimg {
+      position: relative;
+      left:180px;
+      border: 0px solid #73AD21;
+    }
+    .reaction1{
+      position: absolute;
+      left:0px;
+      top: 0px;
+      border: 0px solid #73AD21;
+    }
+    </style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial;
+  font-size: 17px;
+}
+
+#myVideo {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+
+
+
+#myBtn {
+  width: 100px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+#reaction {
+  width: 200px
+  padding: 10px;
+  border: none;
+  background: #000;
+}
+
+</style>
+</head>
+<body>
+
+<video autoplay loop id="myVideo">
+  <source src="vid/Comp 2_6.mp4" type="video/mp4">
+
+
+  Your browser does not support HTML5 video.
+</video>
+
+<div class="content">
+  <h1>Heading</h1>
+  <p>Lorem ipsum dolor sit amet, an his etiam torquatos. Tollit soleat phaedrum te duo, eum cu recteque expetendis neglegentur. Cu mentitum maiestatis persequeris pro, pri ponderum tractatos ei. Id qui nemore latine molestiae, ad mutat oblique delicatissimi pro.</p>
+  <button id="myBtn" onclick="myFunction()">Pause</button>
+</div>
+
+
+  <div class="fakeimg" style="height:100px;">
+  <img src=preg.png width=1000 >
+
+<img src="외눈박이.png" >
+
+</div>
+
+
+<script>
+var video = document.getElementById("myVideo");
+var btn = document.getElementById("myBtn");
+var video = document.getElementById("reaction");
+video.addEventListener("canplay", function() {
+  setTimeout(function() {
+    video.play();
+  }, 500000);
+});
+function myFunction() {
+  if (video.paused) {
+    video.play();
+    btn.innerHTML = "Pause";
+  } else {
+    video.pause();
+    btn.innerHTML = "Play";
+  }
+
+
+</body>
+</html>
